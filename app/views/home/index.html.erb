@@ -1,0 +1,86 @@
+<div id="search-container">
+  <h1 class="title">RealTime Search App</h1>
+  <input id="search-box" type="text" placeholder="Search anything..." />
+  
+  <div id="results-wrapper">
+    <h2 id="top-searches-title" style="display: none;">Top Searches</h2>
+    <ul id="results"></ul>
+  </div>
+</div>
+
+<%= javascript_importmap_tags %>
+<%= javascript_import_module_tag "search" %>
+
+<style>
+  body {
+    font-family: system-ui, sans-serif;
+    background: #f7f7f7;
+    padding: 2rem;
+  }
+
+  .search-container {
+    max-width: 500px;
+    margin: auto;
+    background: white;
+    padding: 2rem;
+    border-radius: 1rem;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  }
+
+  .title {
+    text-align: center;
+    margin-bottom: 1rem;
+    color: #333;
+  }
+
+  #search-box {
+    width: 100%;
+    padding: 0.75rem 1rem;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 0.5rem;
+    box-sizing: border-box;
+    margin-bottom: 1rem;
+    transition: border-color 0.3s;
+  }
+
+  #search-box:focus {
+    outline: none;
+    border-color: #5b9fff;
+  }
+
+.keyword-details {
+  margin-top: 0.5rem;
+  padding: 0.75rem;
+  background-color: #f9f9f9;
+  border-left: 3px solid #5b9fff;
+  border-radius: 0.3rem;
+  font-size: 0.9rem;
+  color: #333;
+}
+
+.details-card p {
+  margin: 0.3rem 0;
+}
+
+#results li {
+  padding: 0.75rem 1rem;
+  background: #f0f0f0;
+  margin-bottom: 0.5rem;
+  border-radius: 0.4rem;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+#results li:hover {
+  background: #e6e6e6;
+}
+
+.error {
+  color: red;
+  font-weight: bold;
+}
+</style>
+
+
+
